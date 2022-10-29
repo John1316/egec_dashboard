@@ -1,0 +1,346 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card notepad__card">
+
+      <textarea name="" id="notepad" (change)="typingInNotepad($event)" class="notepad form-control"
+        placeholder="بماذا تفكر؟">{{notepad}}</textarea>
+      <!-- <ckeditor
+          [(ngModel)]="ckeditorContent"
+          [config]="ckeConfig"
+          (keyup)="typingInNotepad($event)"
+          formControlName="text"
+          ></ckeditor> -->
+    </div>
+    <div class="d-flex justify-content-between">
+      <button type="button" *ngIf="!hideNotePad" (click)="showNotePad()" title=" المفكرة الخاصة"
+        class="btn btn-rounded-primary show mr-1 my-2"><i class="fas fa-sticky-note" aria-hidden="true"></i></button>
+      <button type="button" *ngIf="hideNotePad" (click)="hideNotepad()" title=" المفكرة الخاصة"
+        class="btn btn-rounded-primary hide mr-1 my-2"><i class="fas fa-sticky-note" aria-hidden="true"></i></button>
+      <button title="تغيير الواجهة الخلفية" class="btn btn-rounded-success showBackground my-2" (click)="showBackground()">
+        <i class="fa fa-user-edit"></i>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="row mb-5">
+  <div class="col-xl-5 mb-4">
+    <div class="card card-shadow main__card overflow-hidden mb-4 h-100">
+      <div class="bg-primary bg-soft">
+        <div class="row align-items-center justify-content-between align-items-center">
+          <div class="col-md-7 col-6 name_container">
+            <div class="text-primary p-3">
+              <h2 class="text-primary"> {{ greeting }}</h2>
+              <p>{{ userArray?.name }}</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-5 align-self-end">
+            <img src="https://themesbrand.com/skote/layouts/assets/images/profile-img.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="card-body p-1 pt-0">
+        <div class="row justify-content-center">
+          <div class="col-sm-4 text-center">
+            <div class=" profile-user-wid mx-auto">
+              <img src="assets/images/profile-10.jpg" alt="" class="img-thumbnail rounded-circle w-100 h-100">
+              <!-- <div class="card_img img-thumbnail rounded-circle w-100 h-100">
+                                <p class="mb-0 fs22">{{fullName}}</p>
+                              </div> -->
+            </div>
+            <p class="text-muted mb-0 text-truncate text_role">{{ role }}</p>
+          </div>
+
+
+        </div>
+        <hr class="mb-3 mt-1">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-md-3 col-6 clock_container">
+            <div class="clock">
+              <div class="hour">
+                <div class="hr" id="hr"></div>
+              </div>
+              <div class="min">
+                <div class="mn" id="mn"></div>
+              </div>
+              <div class="sec">
+                <div class="sc" id="sc"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <bs-datepicker-inline [bsValue]="bsInlineValue"></bs-datepicker-inline>
+          </div>
+          <div class="col-md-3 col-6 date_container text-center">
+            <div class="date">
+              <span class="day">{{day}}</span><br>
+              <span class="month">{{month}}</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="col-xl-7">
+    <div class="grid columns-12 gap-6 statitics">
+      <div class="g-col-12  g-col-lg-4 intro-y">
+        <div class="flip-card report-box zoom-in">
+          <div class="box p-5 flip-card-inner color1">
+            <div class="flip-card-front">
+              <div class="d-flex justify-content-center">
+                <i data-feather="briefcase" class="fa fa-briefcase report-box__icon "></i>
+
+              </div>
+              <div class="report-box__total fs-3xl fw-medium mt-6">30</div>
+              <div class="fs-base  mt-1">اجمالي عدد الموظفين الحاليين</div>
+            </div>
+            <div class="flip-card-back">
+              <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" [legend]="false" [type]="'line'">
+              </canvas>
+
+              <!-- <canvas id="donut-chart-widget" height="100px" width="100px"></canvas> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="g-col-12 g-col-lg-4 intro-y">
+        <div class="flip-card report-box zoom-in">
+          <div class="box p-5 color2">
+            <div class=" ">
+
+              <div class="d-flex justify-content-center">
+                <i data-feather="users" class="fa fa-users report-box__icon "></i>
+
+              </div>
+              <div class="report-box__total fs-3xl fw-medium mt-6">2500</div>
+              <div class="fs-base  mt-1"> عدد العملاء
+              </div>
+            </div>
+            <!-- <div class="flip-card-back">
+                          <canvas baseChart
+                          [datasets]="userDoughnutChartDatasets"
+                          [options]="doughnutChartOptions"
+                          [labels]="userDoughnutChartLabels"
+
+                          [legend]="false"
+                          [type]="'doughnut'">
+                          </canvas>
+                      </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="g-col-12 g-col-lg-4 intro-y">
+        <div class="flip-card report-box zoom-in">
+          <div class="box p-5 color5">
+
+            <div class="d-flex justify-content-center">
+              <i data-feather="dollar-sign" class=" fa fa-dollar report-box__icon"></i>
+
+            </div>
+            <div class="report-box__total fs-3xl fw-medium mt-6">20%</div>
+            <div class="fs-base  mt-1">أجمالي التارجت نسبة التحقيق (%)</div>
+          </div>
+        </div>
+      </div>
+      <div class="g-col-12 g-col-lg-4 intro-y">
+        <div class="flip-card report-box zoom-in">
+          <div class="box p-5 color3">
+
+            <div class="d-flex justify-content-center">
+              <i data-feather="users" class=" fa fa-users report-box__icon "></i>
+
+            </div>
+            <div class="report-box__total fs-3xl fw-medium mt-6">1500</div>
+            <div class="fs-base  mt-1">
+              إجمالي عدد الطلاب المعينين
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="g-col-12 g-col-lg-4 intro-y">
+        <div class=" report-box zoom-in">
+          <div class="box p-5  color4">
+
+            <div class="d-flex justify-content-center">
+              <i data-feather="users" class="fa fa-users report-box__icon "></i>
+
+            </div>
+            <div class="report-box__total fs-3xl fw-medium mt-6">1000</div>
+            <div class="fs-base  mt-1">
+              إجمالي عدد الطلاب الغير المعينين
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="g-col-12 g-col-lg-4 intro-y">
+        <div class="flip-card report-box zoom-in">
+          <div class="box p-5  color6">
+
+            <div class="d-flex justify-content-center">
+              <i data-feather="phone-call" class="fa fa-phone-volume report-box__icon"></i>
+
+            </div>
+            <div class="report-box__total fs-3xl fw-medium mt-6">25</div>
+            <div class="fs-base  mt-1">اجمالي عدد المكلمات</div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-5">
+    <div class="card card-shadow mb-4">
+      <div class="card-header">
+        <h5 class="card-title mb-0">اخر الأشعارات التي لم يتم فتحها</h5>
+      </div>
+      <div class="chat-body">
+        <ul class="chats p-0">
+          <li class="out">
+            <div class="media">
+              <div class="pull-right thumb thumb-sm">
+                <div class="card_img">
+                  <p class="mb-0 fs16">J</p>
+                </div>
+              </div>
+              <div class="media-body">
+                <p class="media-heading"><a role="button" tabindex="0" class="name">John Maher
+                  </a><span class="datetime">at 12.10.2014</span></p>
+                <span class="body">
+                  لقد قام John Maher بتخصيص طالب جديد لك
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="out">
+            <div class="media">
+              <div class="pull-right thumb thumb-sm">
+                <div class="card_img">
+                  <p class="mb-0 fs16">K</p>
+                </div>
+              </div>
+              <div class="media-body">
+                <p class="media-heading"><a role="button" tabindex="0" class="name">Khalifa
+                  </a><span class="datetime">2 hours ago</span></p>
+                <span class="body">قام بكتابة تعليق على أحد الأرقام الخاصة بك
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="out">
+            <div class="media">
+              <div class="pull-right thumb thumb-sm">
+                <div class="card_img">
+                  <p class="mb-0 fs16">M</p>
+                </div>
+              </div>
+              <div class="media-body">
+                <p class="media-heading"><a role="button" tabindex="0" class="name">Maha
+                  </a><span class="datetime">2 hours ago</span></p>
+                <span class="body">تطلب Maha الإذن بقبول فواتير طالب جديد
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="in">
+            <div class="media">
+              <div class="pull-left thumb thumb-sm">
+                <!-- <img class="media-object img-circle" src="assets/images/profile-2.jpg" alt=""> -->
+                <div class="card_img">
+                  <p class="mb-0 fs16">M</p>
+                </div>
+              </div>
+              <div class="media-body">
+                <p class="media-heading"><a role="button" tabindex="0" class="name">You
+                  </a><span class="datetime">1 hours ago</span></p>
+                <span class="body">قمت بتعديل الملف الشخصي لطالب جديد
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-7">
+    <div class="card user__card card-shadow">
+      <div class="card-header">
+        <h5 class="card-title mb-0">الموظفين</h5>
+      </div>
+      <div class="card-body">
+
+        <div class="d-flex">
+          <div class="col-lg-4 userCard" *ngFor="let empolyee of empolyees">
+            <div class="intro-y col-span-12 md:col-span-6 lg:col-span-4 h-100">
+
+              <div class="box">
+                <div class="flex items-start p-3">
+                  <div class="w-full">
+                    <div class="w-16 h-16 mx-auto image-fit ml-2">
+                      <!-- <img alt="Midone - HTML Admin Template" class="rounded-full"
+                                              src="assets/images/profile-10.jpg"> -->
+                      <div class="card_img">
+                        <p class="mb-0 fs16">{{ empolyee.abbrevationName }}</p>
+                      </div>
+                    </div>
+                    <div class="lg:ml-4 text-center lg:text-left mt-3 lg:mt-0">
+                      <h4 href="" class="font-large username">{{
+                                            empolyee.en_name != null ? empolyee.en_name : empolyee.name
+                                          }}</h4>
+                      <p class="text-slate-500 text-xs mt-0.5 username_role">{{empolyee.reRole}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="widget position-fixed">
+  <div class="widget_container">
+    <div class="d-flex align-items-center justify-content-between py-3 px-1">
+      <h5 class="offcanvas-title">تغيير الواجهة</h5>
+      <button type="button" (click)="hideBackground()">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    <ul class="list-unstyled row widget_container_ul">
+      <li class="col-6" (click)="onClickBackground(1)">
+        <img src="assets/images/background/Defult.jpg" alt="">
+      </li>
+      <li class="col-6" (click)="onClickBackground(2)">
+        <img src="assets/images/background/Black.jpg" alt="">
+      </li>
+      <li class="col-6" (click)="onClickBackground(3)">
+        <img src="assets/images/background/Cacao.jpg" alt="">
+      </li >
+
+      <li class="col-6" (click)="onClickBackground(4)">
+        <img src="assets/images/background/Light.jpg" alt="">
+      </li>
+      <li class="col-12" (click)="onClickBackground(5)">
+        <img src="assets/images/background/Mint.jpg" style="width: 95%;" alt="">
+      </li>
+
+    </ul>
+
+
+  </div>
+</div>
+
+<div class="loading_data" *ngIf="loading">
+
+  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>

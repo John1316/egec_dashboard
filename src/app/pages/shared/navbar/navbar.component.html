@@ -1,0 +1,1518 @@
+<!-- BEGIN: Mobile Menu -->
+<div class="mobile-menu d-xl-none">
+  <div class="mobile-menu-bar d-flex justify-content-between align-items-center">
+      <a href="#" class="d-flex ">
+          <img alt="Rubick Bootstrap HTML Admin Template" class="w-6" src="assets/images/logos/pre-logo.png">
+      </a>
+      <!-- BEGIN: Top Bar -->
+      <div class=" border-theme-29">
+          <div class="top-bar-boxed d-flex align-items-center justify-content-between">
+
+
+              <div class="d-flex align-items-center justify-content-between">
+
+
+                  <!-- BEGIN: Notifications -->
+                  <div class="intro-x dropdown mx-4">
+                      <div class="dropdown-toggle notification notification--light notification--bullet cursor-pointer"
+                          role="button" aria-expanded="false" href="#notes" title="الأشعارات" role="button"
+                          data-bs-toggle="offcanvas"> <i class="fa fa-message-circle notification__icon dark-text-gray-300"></i> </div>
+                  </div>
+                  <!-- END: Notifications -->
+                  <!-- BEGIN: Notifications -->
+                  <div class="intro-x dropdown ml-4">
+                      <div class="dropdown-toggle notification notification--light notification--bullet cursor-pointer"
+                          role="button" aria-expanded="false" title="تعليقات" href="#NotificationsDiv"
+                          role="button" data-bs-toggle="offcanvas"> <i class="fa fa-bell notification__icon dark-text-gray-300"></i> </div>
+                  </div>
+                  <!-- END: Notifications -->
+                  <!-- BEGIN: Account Menu -->
+                  <div class="intro-x dropdown dropdown_user ml-0 w-8 h-8">
+                      <div class="dropdown-toggle w-8 h-8 rounded-pill overflow-hidden shadow-lg image-fit zoom-in"
+                          role="button" aria-expanded="false" data-bs-toggle="dropdown">
+                          <img alt="Rubick Tailwind HTML Admin Template" src="assets/images/profile-10.jpg">
+                      </div>
+                      <div class="dropdown-menu w-56">
+                          <ul class="dropdown-content bg-theme-26 dark-bg-dark-6 text-white">
+                              <li class="p-2 text-right">
+                                  <div class="fw-medium text-white">Mohamed hamed</div>
+                                  <div class="fs-xs text-theme-28 mt-0.5 dark-text-gray-600">Super admin</div>
+                              </li>
+                              <li>
+                                  <hr class="dropdown-divider border-theme-27 dark-border-dark-3">
+                              </li>
+                              <li>
+                                  <a href="#"
+                                      class="dropdown-item text-white bg-theme-1-hover dark-bg-dark-3-hover"> <i
+                                          class="fa fa-user w-4 h-4"></i> الصفحة الشخصية </a>
+                              </li>
+                              <li>
+                                  <hr class="dropdown-divider border-theme-27 dark-border-dark-3">
+                              </li>
+                              <li>
+                                  <a href="#"
+                                      class="dropdown-item text-white bg-theme-1-hover dark-bg-dark-3-hover"> <i
+                                          class="fa fa-sign-out-alt w-4 h-4"></i> خروج </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <!-- END: Account Menu -->
+              </div>
+          </div>
+      </div>
+      <!-- END: Top Bar -->
+      <a href="javascript:;" id="mobile-menu-toggler" (click)="responsiveMenuCLick()" *ngIf="!isOpened" class="mobile-menu-bar__toggler"> <i
+              data-feather="bar-chart-2" class="fa fa-bars text-white"></i> </a>
+      <a href="javascript:;" id="mobile-menu-toggler" (click)="responsiveMenuHide()" *ngIf="isOpened"  class="mobile-menu-bar__toggler"> <i
+              data-feather="bar-chart-2" class="fa fa-times text-white"></i> </a>
+  </div>
+  <ul class="mobile-menu-wrapper border-top border-theme-29 dark-border-dark-3 py-5">
+    <ul>
+      <li>
+        <a [routerLink]="['/admin/home']" routerLinkActive="menu--active" class="menu">
+            <div class="menu__icon"> <i class="fa fa-home"></i> </div>
+            <div class="menu__title">الصفحة الرئيسية
+        </div>
+        </a>
+    </li>
+        <li (click)="submenuClick(1)">
+            <a href="javascript:;" class="menu" >
+                <div class="menu__icon"> <i class="fa fa-ad"></i>  </div>
+                <div class="menu__title"> ادارة التسويق و الأعلانات
+                  <i  class="fa fa-chevron-down menu__sub-icon"></i>
+                </div>
+            </a>
+            <ul class="ad_menu__list">
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i class="fa fa-ad"></i> </div>
+                        <div class="menu__title mr-2"> الإعلانات
+                          <i  class="fa fa-chevron-left menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="#" class="menu">
+                                <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                <div class="menu__title">الكل</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">
+                                <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                <div class="menu__title">الفورم الجديدة
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">
+                                <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                <div class="menu__title">الفورم القديمة
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">
+                                <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                <div class="menu__title">يوتيوب
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">
+                                <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                <div class="menu__title">سناب شات
+
+
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i class="fa fa-bullhorn"></i> </div>
+                        <div class="menu__title mr-2"> التسويق <i  class="fa fa-chevron-left menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="#" class="menu">
+                                <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                <div class="menu__title">كشوف العملاء <i  class="fa fa-chevron-left menu__sub-icon"></i>
+                                </div>
+                            </a>
+                            <ul>
+                              <li>
+                                <a href="#" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">بكالوريوس
+
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">ماجستير
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">دكتوراه
+                                    </div>
+                                </a>
+                            </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li (click)="submenuClick(2)" >
+            <a href="javascript:;" class="menu">
+                <div class="menu__icon"> <i class="fa fa-shopping-basket"></i> </div>
+                <div class="menu__title"> إدارة
+                  المبيعات
+                  <i  class="fa fa-chevron-down menu__sub-icon"></i>
+
+                  </div>
+            </a>
+            <ul class="buy_menu__list">
+              <li>
+                <a href="#" class="menu">
+                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                    <div class="menu__title">الاتصالات
+                      <i  class="fa fa-chevron-left menu__sub-icon"></i>
+                    </div>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">بكالوريوس
+
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">ماجستير
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">دكتوراه
+                        </div>
+                    </a>
+                </li>
+                </ul>
+            </li>
+              <li>
+                <a href="#" class="menu">
+                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                    <div class="menu__title">ادخال ومتابعة الفواتير
+
+                      <i  class="fa fa-chevron-left menu__sub-icon"></i>
+                    </div>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">بكالوريوس
+
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">ماجستير
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">دكتوراه
+                        </div>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            </ul>
+        </li>
+        <li (click)="submenuClick(3)">
+            <a href="javascript:;" class="menu">
+                <div class="menu__icon"> <i class="fa fa-file-alt"></i> </div>
+                <div class="menu__title"> أدارة الحسابات
+
+                  <i  class="fa fa-chevron-down menu__sub-icon"></i>
+
+                </div>
+            </a>
+            <ul class="accounting_menu__list">
+              <li>
+                <a href="#" class="menu">
+                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                    <div class="menu__title">قيد الموافقة
+
+                      <i  class="fa fa-chevron-left menu__sub-icon"></i>
+                    </div>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">بكالوريوس
+
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">ماجستير
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">دكتوراه
+                        </div>
+                    </a>
+                </li>
+                </ul>
+            </li>
+              <li>
+                <a href="#" class="menu">
+                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                    <div class="menu__title">تم قبولها
+
+
+                      <i  class="fa fa-chevron-left menu__sub-icon"></i>
+                    </div>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">بكالوريوس
+
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">ماجستير
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu">
+                        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                        <div class="menu__title">دكتوراه
+                        </div>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            </ul>
+        </li>
+        <li (click)="submenuClick(4)">
+            <a href="javascript:;" class="menu">
+                <div class="menu__icon"> <i class="fa fa-file-alt"></i> </div>
+                <div class="menu__title"> كشوف التسجيل
+                  <i  class="fa fa-chevron-down menu__sub-icon"></i>
+                </div>
+            </a>
+            <ul class="register_menu__list">
+              <li>
+                <a href="#" class="menu">
+                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                    <div class="menu__title">بكالوريوس
+
+
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu">
+                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                    <div class="menu__title">ماجستير
+
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu">
+                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                    <div class="menu__title">دكتوراه
+                    </div>
+                </a>
+            </li>
+            </ul>
+        </li>
+        <li (click)="submenuClick(5)">
+            <a href="javascript:;" class="menu">
+                <div class="menu__icon"> <i class="fa fa-paper-plane"></i> </div>
+                <div class="menu__title"> حركة الملفات
+                  <i  class="fa fa-chevron-down menu__sub-icon"></i>
+                </div>
+            </a>
+            <ul class="movment_menu__list">
+              <li>
+                <a href="#" class="menu">
+                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                    <div class="menu__title">بكالوريوس
+
+
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu">
+                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                    <div class="menu__title">ماجستير
+
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu">
+                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                    <div class="menu__title">دكتوراه
+                    </div>
+                </a>
+            </li>
+            </ul>
+        </li>
+        <li (click)="submenuClick(6)">
+            <a href="javascript:;" class="menu">
+                <div class="menu__icon"> <i class="fa fa-clipboard-list"></i> </div>
+                <div class="menu__title"> التقارير
+                  <i  class="fa fa-chevron-down  menu__sub-icon"></i>
+
+                </div>
+            </a>
+            <ul class="reports_menu__list" style="max-height: 223px;overflow-y: auto;overflow-x: hidden;">
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> وفقًا للدرجة العلمية
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> وفقًا للتخصصات المطلوبة
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> الجنسيات والدول
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> المرشدين والجنسيات
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> مفصل عن المرشدين
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> يومي مفصل عن الأرقام
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> العملاء
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> مصدر الأرقام ودرجة الأهتمام
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> تارجت
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> الاتصالات
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> تقرير القفل الإجمالي
+                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon">  </div>
+                    <div class="menu__title mr-2"> الحملات والإعلانات
+                    </div>
+                </a>
+              </li>
+
+            </ul>
+        </li>
+        <li (click)="submenuClick(7)">
+            <a href="javascript:;" class="menu">
+                <div class="menu__icon"> <i class="fa fa-users"></i> </div>
+                <div class="menu__title"> فريق العمل
+                  <i  class="fa fa-chevron-down  menu__sub-icon"></i>
+                </div>
+            </a>
+            <ul class="users_menu__list">
+              <li>
+                  <a href="javascript:;" class="menu">
+                      <div class="menu__icon"> <i class="fa fa-ad"></i> </div>
+                      <div class="menu__title mr-2"> الحالي
+
+                        <i  class="fa fa-chevron-left top-menu__sub-icon"></i> </div>
+                  </a>
+                  <ul class="">
+                      <li>
+                          <a href="#" class="menu">
+                              <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="menu__title">أدمن
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="menu">
+                              <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="menu__title">إرشاد أكاديمي
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="menu">
+                              <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="menu__title">مساعدين
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="menu">
+                              <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="menu__title">مدخلي البيانات
+
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="menu">
+                              <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="menu__title">أدمن التسجيل
+
+
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="menu">
+                              <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="menu__title">أدمن حركة الملفات
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="menu">
+                              <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="menu__title"> محاسب
+
+
+
+
+                              </div>
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="javascript:;" class="menu">
+                      <div class="menu__icon"> <i class="fa fa-bullhorn"></i> </div>
+                      <div class="menu__title mr-2"> إنشاء
+                        <i  class="fa fa-chevron-left top-menu__sub-icon"></i> </div>
+                  </a>
+                  <ul class="">
+                      <li>
+                          <a href="#" class="menu">
+                              <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="menu__title"> جديد
+                              </div>
+                          </a>
+
+                      </li>
+                      <li>
+                          <a href="#" class="menu">
+                              <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="menu__title"> صلاحيات محددة
+
+                              </div>
+                          </a>
+
+                      </li>
+
+                  </ul>
+              </li>
+          </ul>
+        </li>
+
+
+        <li >
+            <a href="javascript:;.html" class="menu">
+                <div class="menu__icon"><i class="far fa-window-restore"></i> </div>
+                <div class="menu__title"> الأنتقال الي وضع الي ادارة الموقع </div>
+            </a>
+        </li>
+
+    </ul>
+
+  </ul>
+
+</div>
+<!-- END: Mobile Menu -->
+<!-- BEGIN: Top Bar -->
+<div class="border-bottom bigScreen border-theme-29 dark-border-dark-3 mt-n10 mt-md-n5 mx-n3 mx-sm-n8 px-3 px-sm-8 pt-3 pt-md-0 mb-4">
+  <div class="top-bar-boxed d-flex align-items-center justify-content-between">
+      <!-- <div class="">
+          <a href="#" class="-intro-x d-none d-md-flex">
+              <img alt="EGEC Admin Template" class="w-12" src="assets/images/logos/pre-logo.png">
+          </a>
+      </div> -->
+      <nav class="top-nav">
+          <ul>
+            <li>
+              <a [routerLink]="['/admin/home']" routerLinkActive="top-menu--active" class="top-menu">
+                  <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                  <div class="top-menu__title"><a  class="-intro-x d-none d-md-flex">
+                    <img alt="EGEC Admin Template" class="w-12" src="assets/images/logos/pre-logo.png">
+                </a> </div>
+              </a>
+          </li>
+              <li>
+                  <a href="javascript:;" class="top-menu">
+                      <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                      <div class="top-menu__title"> ادارة التسويق و الأعلانات
+                        <i  class="fa fa-chevron-down top-menu__sub-icon"></i>
+                      </div>
+                  </a>
+                  <ul class="">
+                      <li>
+                          <a href="javascript:;" class="top-menu">
+                              <div class="top-menu__icon"> <i class="fa fa-ad"></i> </div>
+                              <div class="top-menu__title mr-2"> الإعلانات
+                                <i  class="fa fa-chevron-left top-menu__sub-icon"></i> </div>
+                          </a>
+                          <ul class="">
+                              <li>
+                                  <a href="#" class="top-menu">
+                                      <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                      <div class="top-menu__title">الكل</div>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" class="top-menu">
+                                      <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                      <div class="top-menu__title">الفورم الجديدة
+                                      </div>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" class="top-menu">
+                                      <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                      <div class="top-menu__title">الفورم القديمة
+                                      </div>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" class="top-menu">
+                                      <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                      <div class="top-menu__title">يوتيوب
+
+                                      </div>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#" class="top-menu">
+                                      <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                      <div class="top-menu__title">سناب شات
+
+
+                                      </div>
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="javascript:;" class="top-menu">
+                              <div class="top-menu__icon"> <i class="fa fa-bullhorn"></i> </div>
+                              <div class="top-menu__title mr-2"> التسويق <i  class="fa fa-chevron-left top-menu__sub-icon"></i> </div>
+                          </a>
+                          <ul class="">
+                              <li>
+                                  <a href="#" class="top-menu">
+                                      <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                      <div class="top-menu__title">كشوف العملاء <i  class="fa fa-chevron-left top-menu__sub-icon"></i>
+                                      </div>
+                                  </a>
+                                  <ul>
+                                    <li>
+                                      <a href="#" class="top-menu">
+                                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                          <div class="top-menu__title">بكالوريوس
+
+
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="top-menu">
+                                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                          <div class="top-menu__title">ماجستير
+
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="top-menu">
+                                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                          <div class="top-menu__title">دكتوراه
+                                          </div>
+                                      </a>
+                                  </li>
+                                  </ul>
+                              </li>
+
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="javascript:;" class="top-menu">
+                      <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                      <div class="top-menu__title"> إدارة
+                        المبيعات
+                        <i  class="fa fa-chevron-down top-menu__sub-icon"></i>
+
+                        </div>
+                  </a>
+                  <ul class="">
+                    <li>
+                      <a href="#" class="top-menu">
+                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                          <div class="top-menu__title">الاتصالات
+                            <i  class="fa fa-chevron-left top-menu__sub-icon"></i>
+                          </div>
+                      </a>
+                      <ul>
+                        <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">بكالوريوس
+
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">ماجستير
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">دكتوراه
+                              </div>
+                          </a>
+                      </li>
+                      </ul>
+                  </li>
+                    <li>
+                      <a href="#" class="top-menu">
+                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                          <div class="top-menu__title">ادخال ومتابعة الفواتير
+
+                            <i  class="fa fa-chevron-left top-menu__sub-icon"></i>
+                          </div>
+                      </a>
+                      <ul>
+                        <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">بكالوريوس
+
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">ماجستير
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">دكتوراه
+                              </div>
+                          </a>
+                      </li>
+                      </ul>
+                  </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="javascript:;" class="top-menu">
+                      <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                      <div class="top-menu__title"> أدارة الحسابات
+
+                        <i  class="fa fa-chevron-down top-menu__sub-icon"></i>
+
+                      </div>
+                  </a>
+                  <ul class="">
+                    <li>
+                      <a href="#" class="top-menu">
+                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                          <div class="top-menu__title">قيد الموافقة
+
+                            <i  class="fa fa-chevron-left top-menu__sub-icon"></i>
+                          </div>
+                      </a>
+                      <ul>
+                        <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">بكالوريوس
+
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">ماجستير
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">دكتوراه
+                              </div>
+                          </a>
+                      </li>
+                      </ul>
+                  </li>
+                    <li>
+                      <a href="#" class="top-menu">
+                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                          <div class="top-menu__title">تم قبولها
+
+
+                            <i  class="fa fa-chevron-left top-menu__sub-icon"></i>
+                          </div>
+                      </a>
+                      <ul>
+                        <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">بكالوريوس
+
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">ماجستير
+
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="top-menu">
+                              <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                              <div class="top-menu__title">دكتوراه
+                              </div>
+                          </a>
+                      </li>
+                      </ul>
+                  </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="javascript:;" class="top-menu">
+                      <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                      <div class="top-menu__title"> كشوف التسجيل
+                        <i  class="fa fa-chevron-down top-menu__sub-icon"></i>
+                      </div>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#" class="top-menu">
+                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                          <div class="top-menu__title">بكالوريوس
+
+
+                          </div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="top-menu">
+                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                          <div class="top-menu__title">ماجستير
+
+                          </div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="top-menu">
+                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                          <div class="top-menu__title">دكتوراه
+                          </div>
+                      </a>
+                  </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="javascript:;" class="top-menu">
+                      <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                      <div class="top-menu__title"> حركة الملفات
+                        <i  class="fa fa-chevron-down top-menu__sub-icon"></i>
+                      </div>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="#" class="top-menu">
+                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                          <div class="top-menu__title">بكالوريوس
+
+
+                          </div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="top-menu">
+                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                          <div class="top-menu__title">ماجستير
+
+                          </div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="top-menu">
+                          <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                          <div class="top-menu__title">دكتوراه
+                          </div>
+                      </a>
+                  </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="javascript:;" class="top-menu">
+                      <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                      <div class="top-menu__title"> التقارير
+                        <i  class="fa fa-chevron-down  top-menu__sub-icon"></i>
+
+                      </div>
+                  </a>
+                  <ul class="" style="max-height: 223px;overflow-y: auto;overflow-x: hidden;">
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> وفقًا للدرجة العلمية
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> وفقًا للتخصصات المطلوبة
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> الجنسيات والدول
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> المرشدين والجنسيات
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> مفصل عن المرشدين
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> يومي مفصل عن الأرقام
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> العملاء
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> مصدر الأرقام ودرجة الأهتمام
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> تارجت
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> الاتصالات
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> تقرير القفل الإجمالي
+                          </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="top-menu">
+                          <div class="top-menu__icon">  </div>
+                          <div class="top-menu__title mr-2"> الحملات والإعلانات
+                          </div>
+                      </a>
+                    </li>
+
+                  </ul>
+              </li>
+              <li>
+                  <a href="javascript:;" class="top-menu">
+                      <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                      <div class="top-menu__title"> فريق العمل
+                        <i  class="fa fa-chevron-down  top-menu__sub-icon"></i>
+                      </div>
+                  </a>
+                  <ul class="" >
+                    <li>
+                        <a href="javascript:;" class="top-menu">
+                            <div class="top-menu__icon"> <i class="fa fa-ad"></i> </div>
+                            <div class="top-menu__title mr-2"> الحالي
+
+                              <i  class="fa fa-chevron-left top-menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="#" class="top-menu">
+                                    <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="top-menu__title">أدمن
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-menu">
+                                    <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="top-menu__title">إرشاد أكاديمي
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-menu">
+                                    <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="top-menu__title">مساعدين
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-menu">
+                                    <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="top-menu__title">مدخلي البيانات
+
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-menu">
+                                    <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="top-menu__title">أدمن التسجيل
+
+
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-menu">
+                                    <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="top-menu__title">أدمن حركة الملفات
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-menu">
+                                    <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="top-menu__title"> محاسب
+
+
+
+
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="top-menu">
+                            <div class="top-menu__icon"> <i class="fa fa-bullhorn"></i> </div>
+                            <div class="top-menu__title mr-2"> إنشاء
+                              <i  class="fa fa-chevron-left top-menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="#" class="top-menu">
+                                    <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="top-menu__title"> جديد
+                                    </div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" class="top-menu">
+                                    <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="top-menu__title"> صلاحيات محددة
+
+                                    </div>
+                                </a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+
+
+              <li>
+                  <a href="javascript:;.html" class="top-menu">
+                      <div class="top-menu__icon"><i class="far fa-window-restore"></i> </div>
+                      <div class="top-menu__title"> الأنتقال الي وضع الي ادارة الموقع </div>
+                  </a>
+              </li>
+
+          </ul>
+      </nav>
+
+      <div class="d-flex align-items-center">
+
+          <!-- BEGIN: Search -->
+          <div class="intro-x position-relative me-3 me-sm-6">
+              <div class="search d-none d-sm-block">
+                  <input type="text" class="search__input form-control border-transparent" placeholder="بحث...">
+                  <i class="fa fa-search search__icon dark-text-gray-300"></i>
+              </div>
+              <a class="notification notification--light d-sm-none" href="#"> <i class="fa fa-search notification__icon dark-text-gray-300"></i> </a>
+              <div class="search-result">
+                  <div class="search-result__content">
+                      <div class="search-result__content__title">Pages</div>
+                      <div class="mb-5">
+                          <a href="#" class="d-flex align-items-center">
+                              <div
+                                  class="w-8 h-8 bg-theme-18 text-theme-9 d-flex align-items-center justify-content-center rounded-circle">
+                                  <i class="w-4 h-4" data-feather="inbox"></i> </div>
+                              <div class="ms-3">Mail Settings</div>
+                          </a>
+                          <a href="#" class="d-flex align-items-center mt-2">
+                              <div
+                                  class="w-8 h-8 bg-theme-17 text-theme-11 d-flex align-items-center justify-content-center rounded-circle">
+                                  <i class="w-4 h-4" data-feather="users"></i> </div>
+                              <div class="ms-3">Users & Permissions</div>
+                          </a>
+                          <a href="#" class="d-flex align-items-center mt-2">
+                              <div
+                                  class="w-8 h-8 bg-theme-14 text-theme-10 d-flex align-items-center justify-content-center rounded-circle">
+                                  <i class="w-4 h-4" data-feather="credit-card"></i> </div>
+                              <div class="ms-3">Transactions Report</div>
+                          </a>
+                      </div>
+                      <div class="search-result__content__title">Users</div>
+                      <div class="mb-5">
+                          <a href="#" class="d-flex align-items-center mt-2">
+                              <div class="w-8 h-8 image-fit">
+                                  <img alt="Rubick Tailwind HTML Admin Template" class="rounded-circle"
+                                      src="assets/images/profile-12.jpg">
+                              </div>
+                              <div class="ms-3">Al Pacino</div>
+                              <div class="ms-auto w-48 truncate text-gray-600 fs-xs text-end">
+                                  alpacino@left4code.com
+                              </div>
+                          </a>
+                          <a href="#" class="d-flex align-items-center mt-2">
+                              <div class="w-8 h-8 image-fit">
+                                  <img alt="Rubick Tailwind HTML Admin Template" class="rounded-circle"
+                                      src="assets/images/profile-2.jpg">
+                              </div>
+                              <div class="ms-3">Leonardo DiCaprio</div>
+                              <div class="ms-auto w-48 truncate text-gray-600 fs-xs text-end">
+                                  leonardodicaprio@left4code.com</div>
+                          </a>
+                          <a href="#" class="d-flex align-items-center mt-2">
+                              <div class="w-8 h-8 image-fit">
+                                  <img alt="Rubick Tailwind HTML Admin Template" class="rounded-circle"
+                                      src="assets/images/profile-15.jpg">
+                              </div>
+                              <div class="ms-3">Tom Cruise</div>
+                              <div class="ms-auto w-48 truncate text-gray-600 fs-xs text-end">
+                                  tomcruise@left4code.com
+                              </div>
+                          </a>
+                          <a href="#" class="d-flex align-items-center mt-2">
+                              <div class="w-8 h-8 image-fit">
+                                  <img alt="Rubick Tailwind HTML Admin Template" class="rounded-circle"
+                                      src="assets/images/profile-6.jpg">
+                              </div>
+                              <div class="ms-3">Al Pacino</div>
+                              <div class="ms-auto w-48 truncate text-gray-600 fs-xs text-end">
+                                  alpacino@left4code.com
+                              </div>
+                          </a>
+                      </div>
+                      <div class="search-result__content__title">Products</div>
+                      <a href="#" class="d-flex align-items-center mt-2">
+                          <div class="w-8 h-8 image-fit">
+                              <img alt="Rubick Tailwind HTML Admin Template" class="rounded-circle"
+                                  src="assets/images/preview-12.jpg">
+                          </div>
+                          <div class="ms-3">Oppo Find X2 Pro</div>
+                          <div class="ms-auto w-48 truncate text-gray-600 fs-xs text-end">Smartphone &amp; Tablet
+                          </div>
+                      </a>
+                      <a href="#" class="d-flex align-items-center mt-2">
+                          <div class="w-8 h-8 image-fit">
+                              <img alt="Rubick Tailwind HTML Admin Template" class="rounded-circle"
+                                  src="assets/images/preview-1.jpg">
+                          </div>
+                          <div class="ms-3">Dell XPS 13</div>
+                          <div class="ms-auto w-48 truncate text-gray-600 fs-xs text-end">PC &amp; Laptop</div>
+                      </a>
+                      <a href="#" class="d-flex align-items-center mt-2">
+                          <div class="w-8 h-8 image-fit">
+                              <img alt="Rubick Tailwind HTML Admin Template" class="rounded-circle"
+                                  src="assets/images/preview-2.jpg">
+                          </div>
+                          <div class="ms-3">Samsung Galaxy S20 Ultra</div>
+                          <div class="ms-auto w-48 truncate text-gray-600 fs-xs text-end">Smartphone &amp; Tablet
+                          </div>
+                      </a>
+                      <a href="#" class="d-flex align-items-center mt-2">
+                          <div class="w-8 h-8 image-fit">
+                              <img alt="Rubick Tailwind HTML Admin Template" class="rounded-circle"
+                                  src="assets/images/preview-10.jpg">
+                          </div>
+                          <div class="ms-3">Nikon Z6</div>
+                          <div class="ms-auto w-48 truncate text-gray-600 fs-xs text-end">Photography</div>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <!-- END: Search -->
+          <!-- BEGIN: Notifications -->
+          <div class="intro-x dropdown mx-4">
+              <div class="dropdown-toggle notification notification--light notification--bullet cursor-pointer"
+                  role="button" aria-expanded="false" href="#notes" title="الأشعارات" role="button"
+                  data-bs-toggle="offcanvas"> <i data-feather="message-circle"
+                      class="fa fa-message notification__icon dark-text-gray-300"></i> </div>
+          </div>
+          <!-- END: Notifications -->
+          <!-- BEGIN: Notifications -->
+          <div class="intro-x dropdown ml-4">
+              <div class="dropdown-toggle notification notification--light notification--bullet cursor-pointer"
+                  role="button" aria-expanded="false" title="تعليقات" href="#NotificationsDiv" role="button"
+                  data-bs-toggle="offcanvas"> <i
+                      class="fa fa-bell notification__icon dark-text-gray-300"></i> </div>
+          </div>
+          <!-- END: Notifications -->
+          <!-- BEGIN: Account Menu -->
+          <div class="intro-x dropdown dropdown_user w-8 h-8">
+              <div class="dropdown-toggle w-8 h-8 rounded-pill overflow-hidden shadow-lg image-fit zoom-in"
+                  role="button" aria-expanded="false" data-bs-toggle="dropdown">
+                  <!-- <div class="card_img">
+                    <p class="mb-0 fs16">{{fullName}}</p>
+                  </div> -->
+                  <img alt="Rubick Tailwind HTML Admin Template" src="assets/images/profile-10.jpg">
+              </div>
+              <div class="dropdown-menu w-56">
+                  <ul class="dropdown-content dark-bg-dark-6">
+                      <li class="p-2 text-right">
+                          <div class="fw-medium">{{ userArray.name }}</div>
+                          <div class="fs-xs mt-0.5 dark-text-gray-600 text_role">{{ role }}</div>
+                      </li>
+                      <li>
+                          <hr class="dropdown-divider border-theme-27 dark-border-dark-3">
+                      </li>
+                      <li>
+                          <a href="#" class="dropdown-item  bg-theme-1-hover dark-bg-dark-3-hover"> <i
+                                  class="fa fa-user w-4 h-4"></i> الصفحة الشخصية </a>
+                      </li>
+                      <li>
+                          <hr class="dropdown-divider border-theme-27 dark-border-dark-3">
+                      </li>
+                      <li>
+                          <button (click)="logout()" class="dropdown-item bg-theme-1-hover dark-bg-dark-3-hover"> <i
+                                  class="fa fa-sign-out-alt w-4 h-4"></i> خروج </button>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <!-- END: Account Menu -->
+      </div>
+  </div>
+</div>
+<!-- END: Top Bar -->
+<!-- notification -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="NotificationsDiv">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title">الإشعارات</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body notification custom_scroll">
+      <ul class="nav nav-tabs tab-card" role="tablist">
+          <li class="nav-item flex-fill text-center"><a class="nav-link active" data-bs-toggle="tab"
+                  href="#noti_tab_all" role="tab">الكل</a></li>
+          <li class="nav-item flex-fill text-center"><a class="nav-link" data-bs-toggle="tab" href="#noti_tab_msg"
+                  role="tab">مقروء</a></li>
+          <li class="nav-item flex-fill text-center"><a class="nav-link" data-bs-toggle="tab"
+                  href="#noti_tab_archive" role="tab">غير مقروء</a></li>
+      </ul>
+      <div class="tab-content mt-4">
+          <div class="tab-pane fade show active" id="noti_tab_all" role="tabpanel">
+              <ul class="list-group list-group-flush list-group-custom mb-0">
+                  <li class="list-group-item">
+                      <a href="javascript:void(0);" class="d-flex">
+                          <div class="avatar sm rounded no-thumbnail">
+                              <img class="media-object img-circle" src="assets/images/profile-1.jpg" alt="">
+                          </div>
+                          <div class="flex-fill ms-3">
+                              <p class="mb-0">لقد قام  <strong class="text-primary">John maher</strong> بتخصيص طالب جديد لك </p>
+                              <small>11:30 AM Today</small>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="list-group-item read">
+                      <a href="javascript:void(0);" class="d-flex">
+                          <div class="avatar sm rounded no-thumbnail">
+                              <img class="media-object img-circle" src="assets/images/profile-2.jpg" alt="">
+                          </div>
+                          <div class="flex-fill ms-3">
+                              <p class="mb-0">قام
+                                <strong class="text-primary">Mohamed Hamed </strong> iبتعديل الملف الشخصي لطالب جديد</p>
+                              <small>1:30 AM Today</small>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="list-group-item read">
+                      <a href="javascript:void(0);" class="d-flex">
+                          <div class="avatar sm rounded no-thumbnail">
+                              <img class="media-object img-circle" src="assets/images/profile-3.jpg" alt="">
+                          </div>
+                          <div class="flex-fill ms-3">
+                              <p class="mb-0">قام
+
+                                <strong class="text-primary">Khalifa</strong> بكتابة تعليق على أحد الأرقام الخاصة بك</p>
+                              <small>8:30 AM Today</small>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="javascript:void(0);" class="d-flex">
+                        <div class="avatar sm rounded no-thumbnail">
+                            <img class="media-object img-circle" src="assets/images/profile-2.jpg" alt="">
+                        </div>
+                        <div class="flex-fill ms-3">
+                            <p class="mb-0">تطلب
+                              <strong class="text-primary">Maha</strong> الإذن بقبول فواتير طالب جديد</p>
+                            <small>1:30 AM Today</small>
+                        </div>
+                    </a>
+                  </li>
+              </ul>
+          </div>
+          <div class="tab-pane fade" id="noti_tab_msg" role="tabpanel">
+              <ul class="list-group list-group-flush list-group-custom mb-0">
+                <li class="list-group-item read">
+                  <a href="javascript:void(0);" class="d-flex">
+                      <div class="avatar sm rounded no-thumbnail">
+                          <img class="media-object img-circle" src="assets/images/profile-2.jpg" alt="">
+                      </div>
+                      <div class="flex-fill ms-3">
+                          <p class="mb-0">قام
+                            <strong class="text-primary">Mohamed Hamed </strong> iبتعديل الملف الشخصي لطالب جديد</p>
+                          <small>1:30 AM Today</small>
+                      </div>
+                  </a>
+              </li>
+              <li class="list-group-item read">
+                  <a href="javascript:void(0);" class="d-flex">
+                      <div class="avatar sm rounded no-thumbnail">
+                          <img class="media-object img-circle" src="assets/images/profile-3.jpg" alt="">
+                      </div>
+                      <div class="flex-fill ms-3">
+                          <p class="mb-0">قام
+
+                            <strong class="text-primary">Khalifa</strong> بكتابة تعليق على أحد الأرقام الخاصة بك</p>
+                          <small>8:30 AM Today</small>
+                      </div>
+                  </a>
+              </li>
+              </ul>
+          </div>
+          <div class="tab-pane fade" id="noti_tab_archive" role="tabpanel">
+              <ul class="list-group list-group-flush list-group-custom mb-0">
+                <li class="list-group-item">
+                  <a href="javascript:void(0);" class="d-flex">
+                      <div class="avatar sm rounded no-thumbnail">
+                          <img class="media-object img-circle" src="assets/images/profile-2.jpg" alt="">
+                      </div>
+                      <div class="flex-fill ms-3">
+                          <p class="mb-0">تطلب
+                            <strong class="text-primary">Maha</strong> الإذن بقبول فواتير طالب جديد</p>
+                          <small>1:30 AM Today</small>
+                      </div>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="javascript:void(0);" class="d-flex">
+                      <div class="avatar sm rounded no-thumbnail">
+                          <img class="media-object img-circle" src="assets/images/profile-1.jpg" alt="">
+                      </div>
+                      <div class="flex-fill ms-3">
+                          <p class="mb-0">لقد قام  <strong class="text-primary">John maher</strong> بتخصيص طالب جديد لك </p>
+                          <small>11:30 AM Today</small>
+                      </div>
+                  </a>
+                </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="notes">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title">التعليقات</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body notification custom_scroll">
+
+      <ul class="list-group list-group-flush list-group-custom mb-0">
+          <li class="list-group-item">
+              <a href="javascript:void(0);" class="d-flex">
+                  <div class="avatar sm rounded no-thumbnail">
+                      <img class="media-object img-circle" src="assets/images/profile-1.jpg" alt="">
+                  </div>
+                  <div class="flex-fill ms-3">
+                      <p class="mb-0">يجب ان تكون اكثر دقة <strong class="text-primary">John maher</strong> </p>
+                      <small>11:30 AM Today</small>
+                  </div>
+              </a>
+          </li>
+          <li class="list-group-item read">
+              <a href="javascript:void(0);" class="d-flex">
+                  <div class="avatar sm rounded no-thumbnail">
+                      <img class="media-object img-circle" src="assets/images/profile-2.jpg" alt="">
+                  </div>
+                  <div class="flex-fill ms-3">
+                      <p class="mb-0">لا تنسي ان تتصل ب محمد <strong class="text-primary">Delal ahamad</strong>
+                      </p>
+                      <small>1:30 AM Today</small>
+                  </div>
+              </a>
+          </li>
+      </ul>
+
+  </div>
+</div>

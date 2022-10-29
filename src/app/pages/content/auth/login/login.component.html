@@ -1,0 +1,104 @@
+<div class="container px-sm-10">
+  <div class="row">
+      <!-- BEGIN: Login Info -->
+      <div class="col-lg-6 d-none d-xl-flex flex-column min-vh-screen">
+          <a  class="-intro-x d-flex align-items-center pt-5">
+              <img alt="Rubick Bootstrap HTML Admin Template" class="w-250" src="assets/images/logos/logo.png">
+          </a>
+          <div class="my-auto">
+              <img alt="Rubick Bootstrap HTML Admin Template" class="-intro-x w-65 mt-n16" src="assets/images/Login_vector.png">
+              <h1 class="-intro-x login-h1 text-white fw-medium fs-4xl lh-base mt-10 fw500">
+                مرحبًا بك!
+              </h1>
+              <h4 class="-intro-x login-h4 text-white ">
+                قم بتسجيل الدخول الآن لتتمكن من إدارة موقعك وكذلك الـ CRM الخاص بك.
+
+              </h4>
+          </div>
+      </div>
+      <!-- END: Login Info -->
+      <!-- BEGIN: Login Form -->
+      <div class="col-lg-6  d-flex py-5 py-xl-0 my-5 my-xl-0">
+          <div class="my-auto mx-auto w-75  bg-white dark-bg-dark-1 bg-xl-transparent px-5 px-sm-8 py-8 p-xl-0 rounded-2 shadow-md shadow-xl-none w-full w-sm-3/4 w-lg-2/4 w-xl-auto">
+            <img alt="Rubick Bootstrap HTML Admin Template" class="d-xl-none w-100" src="assets/images/logos/logo2.png">
+            <h1 class="-intro-x login-h1 fw-medium fs-4xl lh-base mt-10 fw500 d-xl-none">
+              مرحبًا بك!
+            </h1>
+            <h4 class="-intro-x login-h4  d-xl-none">
+              قم بتسجيل الدخول الآن لتتمكن من إدارة موقعك وكذلك الـ CRM الخاص بك.
+
+            </h4>
+              <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
+
+                <div class="intro-x mt-8">
+                  <div class="input__wrapper--container">
+                  <div class="input__wrapper">
+                      <input type="text" formControlName="email" class=" form-control py-3 px-4 border-gray-300 d-block" placeholder="البريد الألكتروني">
+                    </div>
+                    <ng-container
+                    *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].errors != null">
+
+                    <button *ngIf="loginForm.controls['email'].errors['required']" type="button"
+                      [popover]="'البريد الألكتروني مطلوب'" [placement]=" 'left'"
+                      class="btn-danger validation"
+                      triggers="mouseenter:mouseleave"
+                      ><i class="fa fa-exclamation"></i></button>
+                    <button *ngIf="loginForm.controls['email'].errors['email']" type="button"
+                      [popover]="'البريد الألكتروني غير صحيح' " [placement]=" 'left'"
+                      class="btn-danger validation" triggers="mouseenter:mouseleave"
+                      ><i class="fa fa-exclamation"></i></button>
+                      <button *ngIf="loginForm.controls['email'].errors['pattern']" type="button"
+                      [popover]="'البريد الألكتروني غير صحيح'" placement="left"
+                      class="btn-danger validation" triggers="mouseenter:mouseleave"
+                      ><i class="fa fa-exclamation"></i></button>
+                    </ng-container>
+                  </div>
+                  <div class="input__wrapper--container">
+                    <div class="input__wrapper">
+                        <input type="password" formControlName="password" class=" form-control py-3 px-4 border-gray-300 d-block mt-4" placeholder="كلمة السر">
+
+                      </div>
+                      <button
+                      *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].errors != null"
+                      type="button" [popover]="'كلمة السر غير صحيحة'"
+                      [placement]="'left'" [outsideClick]="true"
+                      class="btn-danger validation"
+                      triggers="mouseenter:mouseleave"
+                      ><i class="fa fa-exclamation"></i></button>
+                    </div>
+                </div>
+                <!-- <div class="intro-x d-flex text-gray-700 dark-text-gray-600 fs-xs fs-sm-sm mt-4">
+                    <div class="d-flex align-items-center me-auto">
+                        <input id="remember-me" type="checkbox" class="form-check-input border me-2">
+                        <label class="cursor-pointer select-none" for="remember-me">Remember me</label>
+                    </div>
+                </div> -->
+                <div class="intro-x mt-5 mt-xl-8">
+                    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary py-3 px-4 w-full w-xl-32  align-top">
+                      تسجيل دخول
+                    </button>
+                </div>
+              </form>
+
+          </div>
+      </div>
+      <!-- END: Login Form -->
+  </div>
+</div>
+<footer class="footer py-4 fixed-bottom" >
+  <p class="d-flex p-0 align-items-center justify-content-center text-white">جميع الحقوق محفوظة مدعوم من ديجيتال بوند<a class="mx-2" target="_blank" href="https://digitalbondmena.com/">
+          <img height="30px" class="mx-2" src="assets/images/db.png" alt="">
+      </a>© 2022
+
+  </p>
+</footer>
+    <!--Preloader area start here-->
+    <div id="loading" style="background-image: url('assets/images/Loader.jpg')" *ngIf="loading">
+      <div class="loader">
+          <div class="loader-container">
+              <div class='loader-icon'>
+                  <img src="assets/images/logos/pre-logo.png" alt="">
+              </div>
+          </div>
+      </div>
+  </div>

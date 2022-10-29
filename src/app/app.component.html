@@ -1,0 +1,31 @@
+<!--
+  <div class="app-content content">
+    <div class="content-wrapper">
+    <div class="content-body pb-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<div class="sidenav-overlay"></div>
+<div class="drag-target"></div>
+<app-footer></app-footer> -->
+
+<app-navbar *ngIf="!isLogined"></app-navbar>
+<!-- BEGIN: Content -->
+<main class="content main_content position-relative" >
+  <router-outlet></router-outlet>
+
+</main>
+<app-footer *ngIf="!isLogined"></app-footer>
+<div class="body-overlay" (click)="closeOverlay()"></div>
+<!-- END: Content -->
+    <!--Preloader area start here-->
+    <div id="loading" style="background-image: url('assets/images/Loader.jpg')" *ngIf="loading">
+      <div class="loader">
+          <div class="loader-container">
+              <div class='loader-icon'>
+                  <img src="assets/images/logos/pre-logo.png" alt="">
+              </div>
+          </div>
+      </div>
+  </div>
